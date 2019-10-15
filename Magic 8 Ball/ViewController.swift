@@ -15,11 +15,14 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var imageView: UIImageView!
     
-    @IBAction func askButtonPressed(_ sender: UIButton) {
+    fileprivate func insertRandomMagicBall() {
         let number = Int.random(in: 0 ... 4);
-        
-        
+                
         imageView.image = UIImage(named: ballArray[number])
+    }
+    
+    @IBAction func askButtonPressed(_ sender: UIButton) {
+        insertRandomMagicBall()
     }
 }
 
